@@ -20,8 +20,8 @@ public class PayType {
     String salary;
 
     String hourly;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY)
     Commission commission;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY)
     Bonus bonus;
 }

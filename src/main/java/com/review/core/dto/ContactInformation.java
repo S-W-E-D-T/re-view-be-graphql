@@ -24,6 +24,6 @@ public class ContactInformation {
     String zipcode;
     String emailAddress;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY)
     EmergencyContact emergencyContact;
 }
