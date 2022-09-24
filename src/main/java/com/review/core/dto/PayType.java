@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Builder
@@ -21,7 +22,7 @@ public class PayType {
 
     String hourly;
     @OneToMany(fetch = FetchType.LAZY)
-    Commission commission;
+    List<Commission> commission;
     @OneToMany(fetch = FetchType.LAZY)
-    Bonus bonus;
+    List<Bonus> bonus;
 }

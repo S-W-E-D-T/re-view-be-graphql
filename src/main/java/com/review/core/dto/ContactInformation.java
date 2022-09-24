@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Builder
@@ -25,5 +26,5 @@ public class ContactInformation {
     String emailAddress;
 
     @OneToMany(fetch = FetchType.LAZY)
-    EmergencyContact emergencyContact;
+    List<EmergencyContact> emergencyContact;
 }

@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -26,9 +27,9 @@ public class User {
     String role;
     String photo;
     @OneToMany(fetch = FetchType.LAZY)
-    PayType payType;
+    List<PayType> payType;
     @OneToMany(fetch = FetchType.LAZY)
-    ContactInformation contactInformation;
+    List<ContactInformation> contactInformation;
     @OneToMany(fetch = FetchType.LAZY)
-    Pto pto;
+    List<Pto> pto;
 }

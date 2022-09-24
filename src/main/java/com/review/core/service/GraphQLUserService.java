@@ -17,7 +17,7 @@ import java.util.Optional;
 public class GraphQLUserService {
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
     @GraphQLQuery(name = "getUserWithID")
    public Optional<User> getUserWithId(@GraphQLArgument(name= "id") Long id) {
